@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Snapitize</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/icomoon/icomoon.css') }}">
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='slick/slick/slick.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='slick/slick/slick-theme.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='aos/aos.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"/>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg col-md-12 padding-small flex-container">
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#slide-navbar-collapse" aria-controls="slide-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"><i class="icon icon-navicon"></i></span>
+                    </button>
+                    <div class="navbar-collapse collapse" id="slide-navbar-collapse">
+                    <ul class="navbar-nav list-inline light text-uppercase align-items-baseline">
+                        <li class="nav-item active"><a href="#billboard" class="navlink">Home</a></li>
+                        <li class="nav-item"><a href="#about">About us</a></li>
+                        <li class="nav-item"><a href="#portfolios">Portfolios</a></li>		
+                        <li class="nav-item nav-brand">
+                            <a href="index.html"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" width="150" height="200">
+                            </a>
+                        </li>
+                        <li class="nav-item"><a href="#blog">Blog</a></li>
+                        <li class="nav-item"><a href="#gallery">Gallery</a></li>
+                        <li class="nav-item"><a href="#contact">Contact us</a></li>
+                    </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <div id="body-wrapper" class="bg-grey">
+    
+        <section id="billboard" class="dark-overlay">
+            <div class="slide" style="background: url({{ url_for('static', filename='images/banner.jpg') }}) no-repeat; background-size: cover;">
+            </div>
+        </section>
+    
+        <section id="about" class="about-us padding-medium bg-sand">
+            <div class="container">
+                <div class="row">
+                    <div class="text-content text-center col-md-8">
+                        <div class="section-header">
+                            <h2 class="section-title pb-4 text-uppercase">We Capture Your Special Moments</h2>
+                            
+                            <p>Photography that captures connections and emotions that you celebrate on your wedding day. My images explores your love for each other and the joy of sharing it with your family and friends. My goal is to create beautiful and emotive your love for each other and the joy of sharing it with your family and friends photography; an image gallery for you to treasure.</p>
+                            
+                            <p>Tell me your plans, let you wedding day adventure UNFURL with me. I do believe its a collaboration, so let me in on what makes your love work, for me to give let me in on what makes it back to you as a photograph.</p>
+                        </div>
+    
+                        <figure>
+                            <img src="{{ url_for('static', filename='images/dark-logo.png') }}" alt="logo" width="150" height="200">
+
+                        </figure>
+                    </div><!--content-->
+                </div>
+            </div>
+        </section>
+    
+        <section id="portfolios" class="portfolios fancyboxeffect mb-6">	
+            <div class="container">
+                <div class="row">
+                    <div class="section-header text-center">
+                        <h2 class="section-title pb-4 text-uppercase">~ Portfolios ~</h2>
+                    </div>
+                    <div class="portfolios-content d-flex flex-wrap">
+                        <div class="content col-md-4 mb-3">
+                            <a class="image-link js-scroll down-enter" rel="gallery" href="{{ url_for('static', filename='images/model1.jpg') }}">
+                                <img src="{{ url_for('static', filename='images/model1.jpg') }}" alt="model" class="portoImg" width="150" height="400">
+
+                                <div class="overlay-content text-center light">
+                                    <h3 class="title">Portraits</h3>
+                                    <span>View More</span>
+                                </div>
+                            </a>
+                        </div>
+    
+                        <div class="content col-md-4 mb-3">
+                            <a class="image-link js-scroll down-enter" rel="gallery" href="{{ url_for('static', filename='images/model2.jpg') }}">
+
+                                <img src="{{ url_for('static', filename='images/model2.jpg') }}" alt="model" class="portoImg" width="150" height="400">
+                                <div class="overlay-content text-center light">
+                                    <h3 class="title">Food</h3>
+                                    <span>View More</span>
+                                </div>	
+                            </a>
+                        </div>
+    
+                        <div class="content col-md-4">
+                            <a class="image-link js-scroll down-enter" rel="gallery" href="{{ url_for('static', filename='images/model3.jpg') }}">
+                                <img src="{{ url_for('static', filename='images/model3.jpg') }}" alt="model" class="portoImg" width="150" height="400">
+                                <div class="overlay-content text-center light">
+                                    <h3 class="title">Products</h3>
+                                    <span>View More</span>
+                                </div>
+                            </a>
+                        </div>		
+                    </div>
+                </div>
+                    <div class="pix_btn text-center">
+                        <button class="btn-hvr-effects5 mt-5"><span>View Portfolio</span></button> 
+                    </div>	
+            </div>
+        </section>
+    
+        <section id="services" class="services padding-large darkest dark-overlay" style="background: url({{ url_for('static', filename='images/servicebg.jpg') }}) no-repeat; background-size: cover; filter: grayscale(100%);">
+
+            <div class="container">
+                <div class="row">
+                    <div class="section-header text-center light">
+                        <h2 class="section-title text-uppercase pb-4">~ Services ~</h2>
+                    </div>
+                    <div class="text-content light text-center color-secondary col-md-5">
+                        <p>Photography that captures connections and emotions that you celebrate on your wedding day.Photography that captures connections and emotions that you celebrate on your wedding day. </p>
+                        <div class="light-btn newsletter-button d-flex justify-content-center padding-small">
+                            <input type="text" name="Subscribe" placeholder="Your Email Address">			
+                            <div class="pix_btn text-center">
+                                <button class="btn-hvr-effects6"><span class="color-primary text-uppercase">Send it</span></button> 
+                            </div>	
+                        </div>
+                    </div>
+                    <div class="content-row text-center light d-flex flex-wrap">
+                        <div class="content-block col-md-4">
+                            <h3>Photo Sessions</h3>
+                            <p>Photography that captures connections and emotions that you celebrate on your wedding day.</p>
+                        </div>
+                        <div class="content-block col-md-4">
+                            <h3>Occasions</h3>
+                            <p>Photography that captures connections and emotions that you celebrate on your wedding day.</p>
+                        </div>
+                        <div class="content-block col-md-4">
+                            <h3>Photo Editing</h3>
+                            <p>Photography that captures connections and emotions that you celebrate on your wedding day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="testimonials" class="testimonials-wrap padding-medium">
+            <div class="container">
+                <div class="row">
+                    <div class="reviews-content col-md-12 text-center">
+                        <div class="section-header text-center">
+                            <h2 class="section-title text-uppercase">~ Testimonials ~</h2>
+                        </div>
+    
+                        <div class="testimonial-slider">
+                            <div class="testimonials-inner text-center pt-50">
+                                <img src="{{ url_for('static', filename='images/couple.jpg') }}" alt="reviewer" class="reviewImg img-circle align-center">
+
+                                <p>Amazing photographer. Jack was very easy to work with and made us feel really ease. The finished product was exactly what we envisioned. He listened to exactly what we wanted, and I never felt like I was being made to pose - the whole process was very natural. We were able to go and enjoy our night with the guests and Jack took care of the rest</p>
+                                <div class="testimonial-author text-uppercase">
+                                    <strong class="name d-flex justify-content-center mt-3">"Garv Anand"</strong>
+                                </div>
+                            </div>
+    
+                            <div class="testimonials-inner pt-50">
+                                <img src="{{ url_for('static', filename='images/couple.jpg') }}" alt="reviewer" class="reviewImg img-circle align-center">
+                                <p>He was very easy to work with and made us feel really ease. The finished product was exactly what we envisioned. He listened to exactly what we wanted, and I never felt like I was being made to pose - the whole process was very natural. We were able to go and enjoy our night with the guests and Jack took care of the rest</p>
+                                <div class="testimonial-author text-uppercase">
+                                    <strong class="name d-flex justify-content-center mt-3">"ABhinav Anand"</strong>
+                                </div>
+                            </div>
+    
+                            <div class="testimonials-inner pt-50">
+                                <img src="{{ url_for('static', filename='images/couple.jpg') }}" alt="reviewer" class="reviewImg img-circle align-center">
+                                <p>Photography that captures connections and emotions that you celebrate on your wedding day.</p>
+                                <div class="testimonial-author text-uppercase">
+                                    <strong class="name d-flex justify-content-center mt-3">"Kunal Soni"</strong>
+                                </div>
+                            </div>
+    
+                        </div>			
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    
+    
+        <section id="gallery" class="gallery-wrap padding-medium">
+            <div class="section-header text-center">
+                <h2 class="section-title text-uppercase pb-4">~ Gallery ~</h2>
+            </div>
+            <div class="gallery-content">
+    
+                <div class="gallery-row">
+                    
+                    <div class="content col-md-4 pb-4">
+                        <figure>
+                            <a class="image-link" href="{{ url_for('static', filename='images/largegalleryimg1.jpg') }}">
+
+                                <img src="{{ url_for('static', filename='images/galleryimg1.jpg') }}" alt="model" class="galleryImg">
+                                <div class="overlay">
+                                    <i class="icon icon-search-plus"></i>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="content col-md-4 pb-4">
+                        <figure>
+                            <a class="image-link" href="{{ url_for('static', filename='images/largegalleryimg2.jpg') }}">
+
+                                <img src="{{ url_for('static', filename='images/galleryimg2.jpg') }}" alt="model" class="galleryImg">
+                                <div class="overlay">
+                                    <i class="icon icon-search-plus"></i>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="content col-md-4 pb-4">
+                        <figure>
+                            <a class="image-link" href="{{ url_for('static', filename='images/largegalleryimg3.jpg') }}">
+
+                                <img src="{{ url_for('static', filename='images/galleryimg3.jpg') }}" alt="model" class="galleryImg">
+                                <div class="overlay">
+                                    <i class="icon icon-search-plus"></i>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+    
+                </div>
+    
+                <div class="gallery-row">
+                    <div class="content col-md-4 pb-4">
+                        <figure>
+                            <a class="image-link" href="{{ url_for('static', filename='images/largegalleryimg4.jpg') }}">
+
+                                <img src="{{ url_for('static', filename='images/galleryimg4.jpg') }}" alt="model" class="galleryImg">
+                                <div class="overlay">
+                                    <i class="icon icon-search-plus"></i>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="content col-md-4 pb-4">
+                        <figure>
+                            <a class="image-link" href="{{ url_for('static', filename='images/largegalleryimg5.jpg') }}">
+
+                                <img src="{{ url_for('static', filename='images/galleryimg5.jpg') }}" alt="model" class="galleryImg">
+                                <div class="overlay">
+                                    <i class="icon icon-search-plus"></i>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="content col-md-4 pb-4">
+                        <figure>
+                            <a class="image-link" href="{{ url_for('static', filename='images/largegalleryimg6.jpg') }}">
+
+                                <img src="{{ url_for('static', filename='images/galleryimg6.jpg') }}" alt="model" class="galleryImg">
+                                <div class="overlay">
+                                    <i class="icon icon-search-plus"></i>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+    
+                <div class="gallery-row">
+                    <div class="content col-md-4 pb-4">
+                        <figure>
+                            <a class="image-link" href="{{ url_for('static', filename='images/largegalleryimg1.jpg') }}">
+
+                                <img src="{{ url_for('static', filename='images/galleryimg1.jpg') }}" alt="model" class="galleryImg">
+                                <div class="overlay">
+                                    <i class="icon icon-search-plus"></i>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="content col-md-4 pb-4">
+                        <figure>
+                            <a class="image-link" href="{{ url_for('static', filename='images/largegalleryimg2.jpg') }}">
+
+                                <img src="{{ url_for('static', filename='images/galleryimg2.jpg') }}" alt="model" class="galleryImg">
+                                <div class="overlay">
+                                    <i class="icon icon-search-plus"></i>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="content col-md-4 pb-4">
+                        <figure>
+                            <a class="image-link" href="{{ url_for('static', filename='images/largegalleryimg3.jpg') }}">
+
+                                <img src="{{ url_for('static', filename='images/galleryimg3.jpg') }}" alt="model" class="galleryImg">
+                                <div class="overlay">
+                                    <i class="icon icon-search-plus"></i>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+    
+            </div>
+            
+            <div class="pix_btn text-center">
+                <button class="btn-hvr-effects5 mt-5"><span>View Gallery</span></button> 
+            </div>	
+    
+        </section>
+    
+        <section id="blog" class="latest-blogs padding-large light">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOuOdCsRYfrbh2bhSvsvS5n2iguOafpuaAz-rK3DVwzQ83nw/viewform?embedded=true" width="100%" height="1086" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </section>
+        
+    
+        <section class="instagram padding-medium">
+            <div class="container">
+                <div class="row">
+                <div class="section-header text-center">
+                    <h2 class="section-title text-uppercase pb-4">instagram</h2>
+                </div>
+                    <div class="col-md-2 text-center mb-3">
+                        <figure>
+                            <a href="https://www.instagram.com/sarthak_ghosh23/">
+                                <img src="{{ url_for('static', filename='images/galleryimg1.jpg') }}" alt="instagram">
+
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-md-2 text-center mb-3">
+                        <figure>
+                            <a href="https://www.instagram.com/sarthak_ghosh23/">
+                                <img src="{{ url_for('static', filename='images/galleryimg2.jpg') }}" alt="instagram">
+
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-md-2 text-center mb-3">
+                        <figure>
+                            <a href="https://www.instagram.com/sarthak_ghosh23/">
+                                <img src="{{ url_for('static', filename='images/galleryimg3.jpg') }}" alt="instagram">
+
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-md-2 text-center mb-3">
+                        <figure>
+                            <a href="https://www.instagram.com/sarthak_ghosh23/">
+                                <img src="{{ url_for('static', filename='images/galleryimg4.jpg') }}" alt="instagram">
+
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-md-2 text-center mb-3">
+                        <figure>
+                            <a href="https://www.instagram.com/sarthak_ghosh23/">
+                                <img src="{{ url_for('static', filename='images/galleryimg5.jpg') }}" alt="instagram">
+
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-md-2 text-center mb-3">
+                        <figure>
+                            <a href="https://www.instagram.com/sarthak_ghosh23/">
+                                <img src="{{ url_for('static', filename='images/galleryimg6.jpg') }}" alt="instagram">
+
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </div>	
+        </section>
+        
+        <button onclick="toggleChatPopup()">Open Chat</button>
+    
+     
+        
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="flex-container flex-wrap">
+    
+                    <div class="col-md-4 widget-menu">
+                        <div class="footer-menu d-flex justify-content-center">
+                            <ul class="list-unstyled mr-5 text-uppercase">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Portfolio</a></li>
+                            </ul>
+                            <ul class="list-unstyled text-uppercase">
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 widget-menu footer-social-logo text-center">
+                        <div class="footer-logo text-center mb-3">
+                            <img src="{{ url_for('static', filename='images/dark-logo.png') }}" class="mb-3">
+                        </div>	
+                        <div class="social-links">
+                            <ul class="list-unstyled d-flex">
+                                <li class="mr-3"><a href="https://www.instagram.com/sarthak_ghosh23/"><i class="icon icon-instagram m-1"></i></a></li>
+                                <li class="mr-3"><a href="#"><i class="icon icon-twitter m-1"></i></a></li>
+                                <li><a href="#"><i class="icon icon-youtube m-1"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 widget-menu">
+                        <div class="footer-contact">
+                            <h5 class="widget-title text-uppercase">Stay in touch</h5>
+                            <ul class="list-unstyled">
+                                <li><strong>Snapitize Photography</strong></li>
+                                <li>Gurugram</li>
+                                <li>New Delhi</li>
+                                <li>India</li>
+                                <li><a href="mailto:Shutternbeer@gmail.com">Shutternbeer@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    </div>
+    
+                </div>
+            </div>
+        </footer>
+    
+        <div class="footer-bottom bg-mine-shaft">
+            <div class="container">
+                <div class="padding-xsmall text-center">
+                    <div class="copyright color-secondary">
+                        <p class="mb-0">© Snapitize. All Rights Reserved. Made by <a href="https://garvanand-github-io-git-main-garvanand.vercel.app/   " target="_blank">Garv Anand</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div> 
+    
+    <script src="{{ url_for('static', filename='js/jquery-1.11.0.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    
+    <script type="text/javascript" src="{{ url_for('static', filename='slick/slick/slick.min.js') }}"></script>
+    
+    <script type="text/javascript" src="{{ url_for('static', filename='aos/aos.js') }}"></script>
+    
+    <script type="text/javascript" src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        function toggleChatPopup() {
+            var chatPopup = document.getElementById("chat-popup");
+            chatPopup.classList.toggle("show");
+        }
+    
+        document.addEventListener("DOMContentLoaded", function () {
+    
+        });
+    </script>
+    
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Hi Snapitizer is here to help!!</h4>
+                        <p class="chatbox__description--header">Hi. My name is Snapitizer. How can I help you?</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Write a message...">
+                    <button class="chatbox__send--footer send__button">Send</button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" alt="Chatbox Icon">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+    <style>
+        .chatbox {
+            transition: top 0.3s ease-in-out;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var chatButton = document.querySelector(".chatbox__button");
+            var chatPopup = document.querySelector(".chatbox");
+    
+            function toggleChatPopup() {
+                chatPopup.classList.toggle("show");
+            }
+    
+            chatButton.addEventListener("click", toggleChatPopup);
+    
+            // Additional code to handle the scroll
+            function handleScroll() {
+                var scrollY = window.scrollY || window.pageYOffset;
+                var bannerHeight = document.getElementById("billboard").offsetHeight;
+    
+                if (scrollY > bannerHeight) {
+                    chatPopup.classList.add("sticky");
+                    var chatboxHeight = chatPopup.offsetHeight;
+                    var availableSpace = document.documentElement.scrollHeight - chatboxHeight;
+    
+                    if (scrollY + chatboxHeight > availableSpace) {
+                        chatPopup.style.top = (availableSpace - scrollY) + "px";
+                    } else {
+                        chatPopup.style.top = "0";
+                    }
+                } else {
+                    chatPopup.classList.remove("sticky");
+                    chatPopup.style.top = "0";
+                }
+            }
+    
+            window.addEventListener("scroll", handleScroll);
+        });
+    </script>
+
+</body>
+
+</html>
